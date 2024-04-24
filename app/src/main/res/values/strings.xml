@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ATExternal</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="bgimgdesc">Background Image</string>
+    <string name="titletext">The Energetic Convention</string>
+    <string name="statustext">Open Reader</string>
+
+    <string name="openReader">Open Reader</string>
+    <string name="scanning">Scanning</string>
+    <string name="errorMessage">ERROR:\n%1$s</string>
+    <string name="notRegistered">Badge Not Registered!</string>
+    <string name="invalid">Badge Invalid!</string>
+    <string name="scanIn">Scanning In %1$s</string>
+    <string name="scanOut">Scanning Out %1$s</string>
+    <string name="ok">OK!</string>
+    <string name="noID">No ID found!</string>
+    <string name="serverAuth">Server Auth Error!</string>
+    <string name="notFound">Attendee Not Found!</string>
+    <string name="unknown">Unknown Error</string>
+    <string name="opening">Opening…</string>
+    <string name="scanBadge">Scan Badge\nIn/Out Below</string>
+
+</resources>

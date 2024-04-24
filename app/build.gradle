@@ -1,0 +1,66 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.TheEnergeticCon.AttendanceTrackerJava'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.TheEnergeticCon.AttendanceTrackerJava"
+        minSdk 33
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LICENSE.txt")
+        exclude("META-INF/license.txt")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/NOTICE.txt")
+        exclude("META-INF/notice.txt")
+        exclude("META-INF/ASL2.0")
+        exclude("META-INF/*.kotlin_module")
+    }
+}
+
+dependencies {
+
+    implementation "com.github.skjolber.ndef-tools-for-android:ndeftools:2.0.0"
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+    implementation libs.gson
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation files('Z:/TECSiteApps/AttendanceTrackerAppJava/libs/api-debug.aar')
+    implementation files('Z:/TECSiteApps/AttendanceTrackerAppJava/libs/core-debug.aar')
+    implementation files('Z:/TECSiteApps/AttendanceTrackerAppJava/libs/tools-debug.aar')
+    implementation files('Z:/TECSiteApps/AttendanceTrackerAppJava/libs/wrapper-debug.aar')
+    implementation files('Z:\\TECSiteApps\\AttendanceTrackerAppJava\\libs\\acssmc-1.1.6.aar')
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation group: 'com.mashape.unirest', name: 'unirest-java', version: '1.3.1'
+    implementation group: 'org.apache.httpcomponents.client5' , name: 'httpclient5-fluent' , version: "5.0"
+}
